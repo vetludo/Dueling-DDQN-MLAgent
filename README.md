@@ -58,4 +58,7 @@ Episode 1700	Average Score: 16.71
 
 ### Future Work
 
-I will try to implement Prioritized Experience Replay to improve the performance and reduce the training time. And I will try to take raw screen pixels as inputs instead of ray-based obversation which is used in this work. Stay tuned.
+- Implement Prioritized Experience Replay to improve the performance and reduce the training time.
+- Take raw screen pixels as inputs instead of ray-based obversation by adding CNN layers at input layer. 
+
+Stay tuned.

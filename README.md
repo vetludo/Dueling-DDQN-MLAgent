@@ -1,5 +1,5 @@
 # ddqn-mlagent
-A example code of dueling ddqn (double deep Q-learning) for a banana collecting game from Unity ML agent
+A example code of Dueling DDQN (Double Deep Q-Learning) for a banana collecting game from Unity ML agent
 
 ### Introduction
 

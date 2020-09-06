@@ -29,7 +29,7 @@ Install the project requirements.
 ```
 pip install -r requirements.txt
 ```
-
+Run dueling_ddqn_navigation.ipynb and follow the instruction.
 
 ### Report
 

@@ -17,6 +17,15 @@ The state space has 37 dimensions and contains the agent's velocity, along with 
 
 The task is episodic, and in order to solve the environment, the agent must get an average score of +13 over 100 consecutive episodes.
 
+###Installation
+Install Unity ml-agents.
+git clone https://github.com/Unity-Technologies/ml-agents.git
+git -C ml-agents checkout 0.4.0b
+pip install ml-agents/python/
+Install the project requirements.
+pip install -r requirements.txt
+
+
 ### Report
 
 The agent is trainned by Dueling DDQN (Double Deep Q-Learning) for this game. After episode 500, the agent has already got an average score +13 over 100 consecutive episodes.

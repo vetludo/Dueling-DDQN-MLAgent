@@ -1,5 +1,5 @@
 # ddqn-mlagent
-A example code of ddqn (double deep Q-learning) for a banana collecting game from Unity ML agent
+A example code of dueling ddqn (double deep Q-learning) for a banana collecting game from Unity ML agent
 
 ### Introduction
 
@@ -19,7 +19,7 @@ The task is episodic, and in order to solve the environment, the agent must get 
 
 ### Report
 
-The agent is trainned by DDQN (Double Deep Q-Learning) for this game. After episode 500, the agent has already got an average score +13 over 100 consecutive episodes.
+The agent is trainned by Dueling DDQN (Double Deep Q-Learning) for this game. After episode 500, the agent has already got an average score +13 over 100 consecutive episodes.
 After episode 900, the agent gets an average score +16.
 
 Episode 100	Average Score: 0.65\

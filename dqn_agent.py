@@ -18,21 +18,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
 class Agent():
-    """Interacts with and learns from the environment."""
-
     def __init__(self, state_size, action_size, seed):
-        """Initialize an Agent object.
-
-        Params
-        ======
-            state_size (int): dimension of each state
-            action_size (int): dimension of each action
-            seed (int): random seed
-        """
-        self.state_size = state_size
-        self.action_size = action_size
-        self.seed = random.seed(seed)
-
         # Q-Network
         # self.qnetwork_local = QNetwork(state_size, action_size, seed).to(device)
         # self.qnetwork_target = QNetwork(state_size, action_size, seed).to(device)
@@ -62,13 +48,6 @@ class Agent():
                 self.learn_DDQN(experiences, GAMMA)
 
     def act(self, state, eps=0.):
-        """Returns actions for given state as per current policy.
-
-        Params
-        ======
-            state (array_like): current state
-            eps (float): epsilon, for epsilon-greedy action selection
-        """
         state = torch.from_numpy(state).float().unsqueeze(0).to(device)
         self.qnetwork_local.eval()
         with torch.no_grad():
@@ -82,12 +61,6 @@ class Agent():
             return random.choice(np.arange(self.action_size))
 
     def learn_DDQN(self, experiences, gamma):
-        """Update value parameters using given batch of experience tuples.
-        Params
-        ======
-            experiences (Tuple[torch.Variable]): tuple of (s, a, r, s', done) tuples
-            gamma (float): discount factor
-        """
         states, actions, rewards, next_states, dones = experiences
         # Get index of maximum value for next state from Q_expected
         Q_argmax = self.qnetwork_local(next_states).detach()
@@ -113,12 +86,6 @@ class Agent():
         self.soft_update(self.qnetwork_local, self.qnetwork_target, TAU)
 
     def learn(self, experiences, gamma):
-        """Update value parameters using given batch of experience tuples.
-        Params
-        ======
-            experiences (Tuple[torch.Tensor]): tuple of (s, a, r, s', done) tuples
-            gamma (float): discount factor
-        """
         states, actions, rewards, next_states, dones = experiences
 
         # Get max predicted Q values (for next states) from target model
@@ -140,30 +107,12 @@ class Agent():
         self.soft_update(self.qnetwork_local, self.qnetwork_target, TAU)
 
     def soft_update(self, local_model, target_model, tau):
-        """Soft update model parameters.
-        θ_target = τ*θ_local + (1 - τ)*θ_target
-        Params
-        ======
-            local_model (PyTorch model): weights will be copied from
-            target_model (PyTorch model): weights will be copied to
-            tau (float): interpolation parameter
-        """
         for target_param, local_param in zip(target_model.parameters(), local_model.parameters()):
             target_param.data.copy_(tau * local_param.data + (1.0 - tau) * target_param.data)
 
 
 class ReplayBuffer:
-    """Fixed-size buffer to store experience tuples."""
-
     def __init__(self, action_size, buffer_size, batch_size, seed):
-        """Initialize a ReplayBuffer object.
-        Params
-        ======
-            action_size (int): dimension of each action
-            buffer_size (int): maximum size of buffer
-            batch_size (int): size of each training batch
-            seed (int): random seed
-        """
         self.action_size = action_size
         self.memory = deque(maxlen=buffer_size)
         self.batch_size = batch_size

@@ -55,3 +55,7 @@ Episode 1600	Average Score: 15.96\
 Episode 1700	Average Score: 16.71
 
 ![report](https://github.com/vetludo/ddqn-mlagent/blob/master/assets/report.png?raw=true)
+
+### Future Work
+
+I will try to implement Prioritized Experience Replay to improve the performance and reduce the training time. And I will try to take raw screen pixels as inputs instead of ray-based obversation which is used in this work. Stay tuned.

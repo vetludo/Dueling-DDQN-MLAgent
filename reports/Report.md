@@ -1,5 +1,14 @@
 ## Report
+### Hyper Parameters
+BUFFER_SIZE = int(1e5)  # replay buffer size
+BATCH_SIZE = 64  # minibatch size
+GAMMA = 0.99  # discount factor
+TAU = 1e-3  # for soft update of target parameters
+LR = 5e-4  # learning rate
+UPDATE_EVERY = 4  # how often to update the network
+Network Architectures = (64, 64) # dense layers
 
+### Result
 The agent is trainned by DDQN (Double Deep Q-Learning) for this game. After episode 500, the agent has already got an average score +13 over 100 consecutive episodes.
 After episode 900, the agent gets an average score +16.
 

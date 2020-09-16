@@ -33,7 +33,7 @@ Run dueling_ddqn_navigation.ipynb and follow the instruction.
 
 ### Report
 
-The agent is trainned by Dueling DDQN (Double Deep Q-Learning) for this game. After episode 500, the agent has already got an average score +13 over 100 consecutive episodes.
+The agent is trained by Dueling DDQN (Double Deep Q-Learning) for this game. After episode 500, the agent has already got an average score +13 over 100 consecutive episodes.
 After episode 900, the agent gets an average score +16.
 
 Episode 100	Average Score: 0.65\

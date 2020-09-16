@@ -54,7 +54,7 @@ Episode 1500	Average Score: 15.46\
 Episode 1600	Average Score: 15.96\
 Episode 1700	Average Score: 16.71
 
-![report](https://github.com/vetludo/ddqn-mlagent/blob/master/assets/report.png?raw=true)
+![report](/assets/report.png)
 
 ### Future Work
 

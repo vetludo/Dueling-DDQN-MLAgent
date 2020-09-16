@@ -5,7 +5,7 @@ A example code of Dueling DDQN (Double Deep Q-Learning) for a banana collecting 
 
 For this project, I will train an agent to navigate (and collect bananas!) in a large, square world.  
 
-![Trained Agent](https://raw.githubusercontent.com/vetludo/ddqn-mlagent/master/assets/banana.gif)
+![Trained Agent](/assets/banana.gif)
 
 A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  Thus, the goal of the agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
 
